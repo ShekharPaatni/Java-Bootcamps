@@ -1,0 +1,58 @@
+group 'com.ttn'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply from: 'tasks.gradle'
+sourceCompatibility = 1.8
+sourceSets {
+
+    main {
+        resources {
+            exclude '**/*.txt'
+
+        }
+        java {
+            srcDir 'src/main/code'
+            srcDir 'src/main/java'
+        }
+    }
+}
+//Question 1,2,3
+jar{
+
+    from sourceSets.main.output
+    from ('src/main/resources'){
+        include '**/*.xml'
+    }
+
+    manifest {
+        attributes 'Main-Class' : 'Addition'
+
+    }
+
+
+}
+repositories {
+        //Q5
+        maven{url "http://central.maven.org/maven2/"}
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.13'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.1'
+}
+//Question 4
+task uberjar(type: Jar, dependsOn: [':compileJava', ':processResources']) {
+    from files(sourceSets.main.output.classesDir)
+    from configurations.runtime.asFileTree.files.collect { zipTree(it) }
+
+    manifest {
+        attributes 'Main-Class': 'test'
+    }
+}
