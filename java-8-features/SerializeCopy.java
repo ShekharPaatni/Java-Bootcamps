@@ -12,10 +12,10 @@ public class SerializeCopy implements Serializable{
     }
     public static void main(String[] args) throws IOException, ClassNotFoundException{
         SerializeCopy serializeCopy =  new SerializeCopy(25, "Shekhar");
-//        FileOutputStream fileOutputStream = new FileOutputStream("/home/sam/Desktop/Java-Bootcamp/First-core-java-session/serializeObject.txt");
-//        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-//        objectOutputStream.writeObject(serializeCopy);
-//        objectOutputStream.close();
+       FileOutputStream fileOutputStream = new FileOutputStream("/home/sam/Desktop/Java-Bootcamp/First-core-java-session/serializeObject.txt");
+        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+        objectOutputStream.writeObject(serializeCopy);
+        objectOutputStream.close();
         FileInputStream fileInputStream = new FileInputStream("/home/sam/Desktop/Java-Bootcamp/First-core-java-session/serializeObject.txt");
         ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
         SerializeCopy serializeCopy1 = (SerializeCopy)objectInputStream.readObject();
