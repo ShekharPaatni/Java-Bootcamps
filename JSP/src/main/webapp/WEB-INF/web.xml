@@ -1,0 +1,44 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+    <welcome-file-list>
+        <!--<welcome-file>Question1.jsp</welcome-file>-->
+        <!--<welcome-file>Question2.jsp</welcome-file>-->
+        <welcome-file>Register.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>RegistrationAuthentication</servlet-name>
+        <servlet-class>com.ttn.servlets.RegistrationAuthentication</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistrationAuthentication</servlet-name>
+        <url-pattern>/authenticate</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>RegistationFilter</filter-name>
+        <filter-class>com.ttn.servlets.RegistationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>RegistationFilter</filter-name>
+        <url-pattern>/authenticate</url-pattern>
+    </filter-mapping>
+    
+    <servlet>
+        <servlet-name>LoginAuthentication</servlet-name>
+        <servlet-class>com.ttn.servlets.LoginAuthentication</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginAuthentication</servlet-name>
+        <url-pattern>/login_authetication</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.ttn.servlets.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/login_authetication</url-pattern>
+    </filter-mapping>
+    
+</web-app>
