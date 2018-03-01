@@ -40,5 +40,23 @@
         <filter-name>LoginFilter</filter-name>
         <url-pattern>/login_authetication</url-pattern>
     </filter-mapping>
+
+
+    <servlet>
+        <servlet-name>BlogSubmission</servlet-name>
+        <servlet-class>com.ttn.servlets.BlogSubmission</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BlogSubmission</servlet-name>
+        <url-pattern>/blog</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>BlogSubmission</filter-name>
+        <filter-class>com.ttn.servlets.BlogFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>BlogSubmission</filter-name>
+        <url-pattern>/blog</url-pattern>
+    </filter-mapping>
     
 </web-app>
