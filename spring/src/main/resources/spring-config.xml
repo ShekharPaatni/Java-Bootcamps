@@ -1,0 +1,65 @@
+<!--<beans-->
+    <!--xmlns="http://www.springframework.org/schema/beans"-->
+    <!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+    <!--xmlns:context="http://www.springframework.org/schema/context"-->
+    <!--xsi:schemaLocation="-->
+    <!--http://www.springframework.org/schema/beans-->
+    <!--http://www.springframework.org/schema/beans/spring-beans.xsd-->
+    <!--http://www.springframework.org/schema/context-->
+    <!--http://www.springframework.org/schema/context/spring-context.xsd-->
+    <!--">-->
+    <!--<context:annotation-config/>-->
+    <!--&lt;!&ndash;Required Dependencies&ndash;&gt;-->
+    <!--&lt;!&ndash;<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;start of Question no 3 and 4&ndash;&gt;-->
+    <!--<bean class="com.test.resturant.Tea" id="teaRestaurant" />-->
+    <!--<bean class="com.test.resturant.ExpressTea" id="expressTeaRestaurant"/>-->
+    <!--&lt;!&ndash;byName autowire means the instance name should be same as id or name of a bean&ndash;&gt;-->
+    <!--<alias name="expressTeaRestaurant" alias="hotDrink"/>-->
+
+    <!--<bean class="com.test.resturant.Restaurant" id="restaurant">-->
+        <!--&lt;!&ndash;<constructor-arg name="hotDrink" ref="teaRestaurant"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;Setting instance value using property&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="hotDrink" ref="teaRestaurant"/>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;Setting instance value usig inner bean Question 4&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="hotDrink">&ndash;&gt;-->
+            <!--&lt;!&ndash;<bean class="com.test.resturant.ExpressTea"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;</property>&ndash;&gt;-->
+    <!--</bean>-->
+    <!--&lt;!&ndash;end of Question 3 & 4&ndash;&gt;-->
+    <!--&lt;!&ndash;Start of Question 5&ndash;&gt;-->
+    <!--<bean class="com.test.complex.Complex">-->
+        <!--<property name="integerList">-->
+            <!--<list>-->
+                <!--<value>10</value>-->
+                <!--<value>20</value>-->
+                <!--<value>60</value>-->
+                <!--<value>40</value>-->
+                <!--<value>50</value>-->
+            <!--</list>-->
+        <!--</property>-->
+        <!--<property name="stringIntegerMap">-->
+            <!--<map>-->
+                <!--<entry key="10" value="1"/>-->
+                <!--<entry key="11" value="1"/>-->
+                <!--<entry key="12" value="1"/>-->
+                <!--<entry key="13" value="1"/>-->
+                <!--<entry key="14" value="1"/>-->
+            <!--</map>-->
+        <!--</property>-->
+        <!--<property name="stringSet">-->
+            <!--<set>-->
+                <!--<value>hello</value>-->
+                <!--<value>15</value>-->
+                <!--<value>hello</value>-->
+            <!--</set>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <!--&lt;!&ndash;End of Question 5&ndash;&gt;-->
+
+    <!--<bean class="com.test.Database" >-->
+        <!--<property name="name" value="Mysql"/>-->
+        <!--<property name="port" value="3060"/>-->
+    <!--</bean>-->
+<!--</beans>-->
