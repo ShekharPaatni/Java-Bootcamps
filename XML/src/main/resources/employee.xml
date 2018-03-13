@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<EmployeeDetails>
+        <Manager>
+            <ManagerName>Divyanshu</ManagerName>
+            <ManagerDesignation>AVP</ManagerDesignation>
+            <Team>
+                <Employee>
+                    <EmployeeName>Chandra Shekhar Paatni</EmployeeName>
+                    <EmployeeDesignation>Software Engineer</EmployeeDesignation>
+                </Employee>
+                <Employee>
+                    <EmployeeName>Ashish Pandey</EmployeeName>
+                    <EmployeeDesignation>Software Engineer</EmployeeDesignation>
+                </Employee>
+                <Employee>
+                    <EmployeeName>Aayushi Garg</EmployeeName>
+                    <EmployeeDesignation>Software Engineer</EmployeeDesignation>
+                </Employee>
+                <Employee>
+                    <EmployeeName>Richa</EmployeeName>
+                    <EmployeeDesignation>Software Engineer</EmployeeDesignation>
+                </Employee>
+                <Employee>
+                    <EmployeeName>Amit</EmployeeName>
+                    <EmployeeDesignation>Software Engineer</EmployeeDesignation>
+                </Employee>
+                <Employee>
+                    <EmployeeName>Deepali</EmployeeName>
+                    <EmployeeDesignation>Software Engineer</EmployeeDesignation>
+                </Employee>
+            </Team>
+        </Manager>
+</EmployeeDetails>
